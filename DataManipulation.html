@@ -114,7 +114,17 @@
       const midTrip = 1500 / 60;
       const fastTrip = 1500 / 75;
 
-      console.log();
+      console.log(
+        `Going 55 miles per hour, we would need ${slowFuelNeeded} gallons and it takes ${slowTrip} hours.  Does our budget cover this? ${slowbudgetgood}`
+      );
+
+      console.log(
+        `Going 60 miles per hour, we would need ${midFuelNeeded} gallons and it takes ${midTrip} hours.  Does our budget cover this? ${midbudgetgood}`
+      );
+
+      console.log(
+        `Going 75 miles per hour, we would need ${fastFuelNeeded} gallons and it takes ${fastTrip} hours.  Does our budget cover this? ${fastbudgetgood}`
+      );
     </script>
     Check the script tag in this file
   </body>

@@ -42,11 +42,29 @@
       //3 Feeling loopy
       let cell1 = "";
       let cell2 = "";
-      let cell3 = "";
+      let cell3 = "45";
 
-      let string = "Hello, there are, 2 things";
+      let string = "Hello, there are, 2 things,";
+      let temp = "";
 
-      for (let i = 0; i < string.length; i++) {}
+      let row = 1;
+      for (let i = 0; i < string.length; i++) {
+        if (string[i] == ",") {
+          if (row == 1) {
+            cell1 = temp;
+          } else if (row == 2) {
+            cell2 = temp;
+          } else if (row == 3) {
+            cell3 = temp;
+          }
+          temp = "";
+          row++;
+        } else {
+          temp += string[i];
+          //   console.log("temp is", temp);
+        }
+      }
+      console.log("The sentence:", cell1, cell2, cell3);
     </script>
   </body>
 </html>

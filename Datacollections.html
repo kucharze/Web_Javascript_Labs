@@ -126,6 +126,33 @@
 
       console.log("Objects after popping", objects);
 
+      objects.splice(0, 0, {
+        Id: "48",
+        Name: "Barry",
+        Occupation: "Runner",
+        Age: "25",
+      });
+
+      console.log("Objects after Splice", objects);
+
+      objects.push({
+        Id: "7",
+        Name: "Bilbo",
+        Occupation: "None",
+        Age: "111",
+      });
+
+      console.log("Objects after push", objects);
+
+      //Find average age
+      let total = 0;
+
+      for (let i = 0; i < objects.length; i++) {
+        total += Number(objects[i].Age);
+      }
+
+      console.log(total / 5);
+
       //5. Full circle
     </script>
   </body>

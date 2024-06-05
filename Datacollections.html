@@ -69,11 +69,11 @@
       //Data collections
       //1. Refactoring old code / 2 expanding functionality
 
-      let cells = [[], [], []];
-      let numColumns = 3;
+      let cells = [[], [], [], []];
+      let numColumns = 4;
 
       let string =
-        "Hello, there are, 2 things\r\n we are going,to have, a lot of fun\r\n Are you, excited, right now?!!!\r\n";
+        "ID, Name, Occupation,Age\r\n 42,Bruce, Knight,41\r\n 57,Bob, Fry cook,19\r\n 63,Blaine, Quiz Master,58\r\n 98,Bill, Doctor's assistant,26";
       let temp = "";
 
       let row = 0;
@@ -112,6 +112,9 @@
       console.log("The objects ", objects);
 
       //4. Sorting and manipulating
+      objects.sort();
+
+      console.log(objects);
 
       //5. Full circle
     </script>

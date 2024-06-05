@@ -73,7 +73,7 @@
       let numColumns = 4;
 
       let string =
-        "ID, Name, Occupation,Age\r\n 42,Bruce, Knight,41\r\n 57,Bob, Fry cook,19\r\n 63,Blaine, Quiz Master,58\r\n 98,Bill, Doctor's assistant,26\r\n";
+        "ID,Name,Occupation,Age\r\n 42,Bruce,Knight,41\r\n 57,Bob,Fry cook,19\r\n 63,Blaine,Quiz Master,58\r\n 98,Bill,Doctor's assistant,26\r\n";
       let temp = "";
 
       let row = 0;
@@ -127,7 +127,7 @@
       console.log("Objects after popping", objects);
 
       objects.splice(0, 0, {
-        Id: "48",
+        ID: "48",
         Name: "Barry",
         Occupation: "Runner",
         Age: "25",
@@ -136,7 +136,7 @@
       console.log("Objects after Splice", objects);
 
       objects.push({
-        Id: "7",
+        ID: "7",
         Name: "Bilbo",
         Occupation: "None",
         Age: "111",
@@ -154,6 +154,21 @@
       console.log(total / 5);
 
       //5. Full circle
+      let CSVstring = "Id,Name,Occupation,Age\r\n";
+
+      for (let i = 0; i < objects.length; i++) {
+        CSVstring +=
+          objects[i].ID +
+          "," +
+          objects[i].Name +
+          "," +
+          objects[i].Occupation +
+          "," +
+          objects[i].Age +
+          ",";
+      }
+
+      console.log(CSVstring);
     </script>
   </body>
 </html>

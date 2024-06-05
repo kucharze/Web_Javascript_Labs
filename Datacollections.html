@@ -108,7 +108,7 @@
 
       let objects = [];
       for (let i = 1; i < cells.length; i++) {
-        objects[i] = {
+        objects[i - 1] = {
           [cells[0][0]]: cells[i][0],
           [cells[0][1]]: cells[i][1],
           [cells[0][2]]: cells[i][2],
@@ -121,6 +121,10 @@
       objects.sort();
 
       console.log(objects);
+
+      console.log(objects.pop());
+
+      console.log("Objects after popping", objects);
 
       //5. Full circle
     </script>

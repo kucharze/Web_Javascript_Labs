@@ -67,12 +67,13 @@
       //   console.log("The sentence:", cell1, cell2, cell3);
 
       //Data collections
-      //1. Refactoring old code
+      //1. Refactoring old code / 2 expanding functionality
 
-      let cells = [[], []];
+      let cells = [[], [], []];
+      let numColumns = 3;
 
       let string =
-        "Hello, there are, 2 things\r\n we are going,to have, a lot of fun\r\n";
+        "Hello, there are, 2 things\r\n we are going,to have, a lot of fun\r\n Are you, excited, right now?!!!\r\n";
       let temp = "";
 
       let row = 0;
@@ -96,7 +97,19 @@
           //   console.log("temp is", temp);
         }
       }
+
+      //3 Transforming data
       console.log("The sentence:", cells);
+
+      let objects = [];
+      for (let i = 1; i < cells.length; i++) {
+        objects[i] = {
+          [cells[0][0]]: cells[i][0],
+          [cells[0][1]]: cells[i][1],
+          [cells[0][2]]: cells[i][2],
+        };
+      }
+      console.log("The objects ", objects);
     </script>
   </body>
 </html>

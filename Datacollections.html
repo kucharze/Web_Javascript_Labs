@@ -69,22 +69,27 @@
       //Data collections
       //1. Refactoring old code / 2 expanding functionality
 
-      let cells = [[], [], [], []];
+      let cells = [[], [], [], [], []];
       let numColumns = 4;
 
       let string =
-        "ID, Name, Occupation,Age\r\n 42,Bruce, Knight,41\r\n 57,Bob, Fry cook,19\r\n 63,Blaine, Quiz Master,58\r\n 98,Bill, Doctor's assistant,26";
+        "ID, Name, Occupation,Age\r\n 42,Bruce, Knight,41\r\n 57,Bob, Fry cook,19\r\n 63,Blaine, Quiz Master,58\r\n 98,Bill, Doctor's assistant,26\r\n";
       let temp = "";
 
       let row = 0;
       let collumn = 0;
       for (let i = 0; i < string.length; i++) {
         if (string[i] == ",") {
+          console.log("row", row, "column", collumn);
+          console.log("temp is", temp);
           cells[collumn][row] = temp;
           temp = "";
           row++;
         } else if (string[i] == "\r") {
-          console.log("Found a escaped char");
+          // console.log(tem)
+          //   console.log("Found a escaped char");
+          console.log("row", row, "column", collumn);
+          console.log("temp is", temp);
           if (string[i + 1] == "\n") {
             cells[collumn][row] = temp;
             temp = "";
@@ -107,6 +112,7 @@
           [cells[0][0]]: cells[i][0],
           [cells[0][1]]: cells[i][1],
           [cells[0][2]]: cells[i][2],
+          [cells[0][3]]: cells[i][3],
         };
       }
       console.log("The objects ", objects);

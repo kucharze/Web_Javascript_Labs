@@ -19,6 +19,25 @@
           console.log(i);
         }
       }
+
+      //2 Prime time
+      let num = 4;
+      for (let i = num; i < num + 10; i++) {
+        console.log("i is ", i);
+        let prime = true;
+        for (let j = 2; j < i; j++) {
+          //   console.log("J is ", j);
+          if (i % j === 0) {
+            console.log("Not prime");
+            prime = false;
+            break;
+          }
+        }
+        if (prime) {
+          console.log("Our result is ", i);
+          break;
+        }
+      }
     </script>
   </body>
 </html>
